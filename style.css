@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#lista {
+    width: 900px;
+    list-style-type: none;    
+}
+#lista li {
+    position: relative;
+    color: white;
+    width: 80%;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+    text-transform: uppercase;
+}
+#entrada {
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    
+}
+#btn {
+    width: 100%;
+    height: 50px;
+    color: white;
+    margin-top: 10px;
+    background-color: rgb(97, 42, 160);
+}
+.icone, .icone2 {
+    font-size: 30px;
+    position: absolute;
+    display: inline-block;
+    right: 30px;
+}
+
+.icone {
+    right: 60px;
+}
+
+.icone:hover {
+    color: blue;
+}
+.icone2:hover {
+    color:red;
+}
