@@ -2,11 +2,13 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #777;
+    background-image: linear-gradient(to right, #E0BF28,#E0433A,#0100E0, #26E16D);   
+    background-size: 200% 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center;    
+    animation: degrade 20s infinite alternate;
 }
 #lista {
     width: 900px;
@@ -17,9 +19,10 @@ body {
     color: white;
     width: 80%;
     padding: 20px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid black;
     text-transform: uppercase;
 }
+
 #entrada {
     width: 100%;
     padding: 30px;
@@ -31,7 +34,12 @@ body {
     height: 50px;
     color: white;
     margin-top: 10px;
-    background-color: rgb(97, 42, 160);
+    background-color: rgba(255,255,255,0.0);;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgba(255,255,255,0.5);
+    
 }
 .icone, .icone2 {
     font-size: 30px;
@@ -45,8 +53,51 @@ body {
 }
 
 .icone:hover {
-    color: blue;
+    color: limegreen;
 }
+
 .icone2:hover {
     color:red;
 }
+
+.entrada {
+    animation: entrada 1s 1;
+}
+.saida {
+    animation: saida 1s 1;
+}
+
+@keyframes degrade {
+    from{
+        background-position-x: 0%;        
+    }
+    to{
+        background-position-x: 100%;
+    }
+
+}
+
+@keyframes entrada {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+
+
+  @keyframes saida {
+    from {
+        transform: translateY(0px);
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-30px);
+        transform: translateX(100px);
+        opacity: 0;
+    }
+  }
